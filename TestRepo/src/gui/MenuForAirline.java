@@ -16,7 +16,7 @@ public class MenuForAirline extends Application implements EventHandler<ActionEv
   
 @Override
   public void start(Stage primaryStage) throws Exception{
-	primaryStage.setTitle("Online Airline reservation");
+	primaryStage.setTitle("Online Airline reservation for Delta");
 	button = new Button();
 	button.setText("Click here ");
 	button.setOnAction(this);
