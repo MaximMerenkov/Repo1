@@ -1,4 +1,7 @@
 package gui;
+import java.util.ArrayList;
+
+import BusinessLogic.BusinessLogic;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.*;
@@ -20,7 +23,7 @@ import javafx.stage.Stage;
 public class AirlineRegistration extends Application{
 	 public static void main(String[] args) { 
 		    launch(args);
-		  }
+ }
 		  
 @Override
 	 public void start(Stage primaryStage) throws Exception {
@@ -96,6 +99,22 @@ public class AirlineRegistration extends Application{
 			email,SSN,secQuestion,secAnswer,txtFirstName,txtLastName, txtAddress,txtState,txtZip,
 			txtUserName, txtPassword, txtEmail, txtSSN, txtSecQuestion, txtSecAnswer,
 			completeButton, backButton);
+	
+	completeButton.setOnAction( event -> {
+		
+		BusinessLogic logic = new BusinessLogic();
+		
+		
+		if (logic.didUserEnterAllFields(txtAddress.getText(), null, null, null, null)) {
+			//register user into the database
+			//notify the user of succesful account create with alertbox
+		}
+		
+		else {
+			//notify user with alertbox something went wrong
+		}
+		
+	});
 	
 	registerCenter.setAlignment(Pos.TOP_CENTER);
 	StackPane bottomPane = new StackPane();
