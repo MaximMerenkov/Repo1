@@ -1,0 +1,22 @@
+.root{
+    -fx-background-color: #D8D8D8;
+}
+.button{
+    -fx-background-color: #7cafc2;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 4;
+    -fx-font-weight: bold;
+    
+}
+#Login {
+    -fx-background-color: #7cafc2;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 10pt;
+    -fx-background-radius: 4;
+    -fx-font-weight: bold;
+    
+}
+.label{
+    
+    -fx-font-weight: bold;
+}
