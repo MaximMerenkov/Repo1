@@ -13,14 +13,31 @@ public class DatabaseConnector {
 		
 		try {
 			
-			//loads the dirver to connect to the database
+			//loads the driver to connect to the database
 			Class.forName("com.mysql.jdbc.Driver");
 			
 			Connection connection = DriverManager.getConnection(databaseURL, databaseUser, databasePass);
 			System.out.print("Database connected");
-			String sqlQuery = "INSERT INTO customer(customerusername, customerpassword) VALUES('max', 'password123')";
+			
+			
+			String sqlQuery = "INSERT INTO users (ssn, firstname, lastname, address,zip, state,username,password,email,question, answer) VALUES(?, ?, ?, ?,?,?,?,?,?,?,?)";
 			PreparedStatement statement = connection.prepareStatement(sqlQuery);
+			statement.setString(1, "12345"); //first question mark
+			statement.setString(2, "Simeon"); //second question mark
+			statement.setString(3, "Simeon");
+			statement.setString(4, "Simeon");
+			statement.setString(5, "Simeon");
+			statement.setString(6, "Simeon");
+			statement.setString(7, "Simeon");
+			statement.setString(8, "Simeon");
+			statement.setString(9, "Simeon");
+			statement.setString(10, "Simeon");
+			statement.setString(11, "Simeon");
+			
 			statement.executeUpdate();
+			
+			
+			
 			
 			
 			

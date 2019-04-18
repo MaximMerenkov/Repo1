@@ -64,7 +64,7 @@ public class AirlineLogin extends Application {
 	txtPassword.setPromptText("Enter password");
 	txtPassword.setMaxWidth(150);
 	Button log_in = new Button("Log In");
-	log_in.setId("Login");
+	
 	Button register = new Button("Register");
 	Button recoverPass = new Button("Forgot Password");
 	centerMenu.getChildren().addAll(userName, txtName, password, txtPassword,log_in,register,recoverPass);
@@ -92,7 +92,7 @@ public class AirlineLogin extends Application {
 	centerMenu.setPadding(new Insets(20, 40, 0, 40));
 	centerMenu.setAlignment(Pos.CENTER);
 	
-	//* Create bottom part of the menu
+	//* Create bottom part of the login window
 	StackPane bottomMenu = new StackPane();
     String str = "file:///C:/Users/Max/git/Repo1/TestRepo/src/gui/privateJet.jpg";
     Image image1 = new Image(str);
