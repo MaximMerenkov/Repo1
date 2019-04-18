@@ -1,5 +1,91 @@
 package BusinessLogic;
-
 public class Person {
+	protected String firstName;
+	protected String lastName;
+	protected String address;
+	protected String zipCode;
+	protected String state;
+	protected String email;
+	protected String ssn;
+	protected String securityQuestion;
+	
+	Person () {
+		
+	}
+	
+	public Person(String firstName, String lastName, String address, String zipCode,
+			String state, String email, String ssn, String securityQuestion) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+		this.zipCode = zipCode;
+		this.state = state;
+		this.email = email;
+		this.ssn = ssn;
+		this.securityQuestion = securityQuestion;
+	}
+	
+	public String getFirstName() {
+		return firstName;
+	}
 
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getZipCode() {
+		return zipCode;
+	}
+
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getSsn() {
+		return ssn;
+	}
+
+	public void setSsn(String ssn) {
+		this.ssn = ssn;
+	}
+
+	public String getSecurityQuestion() {
+		return securityQuestion;
+	}
+
+	public void setSecurityQuestion(String securityQuestion) {
+		this.securityQuestion = securityQuestion;
+	}
 }

@@ -44,15 +44,43 @@ public class DatabaseConnector {
 			
 			
 			
-		}catch(Exception ex) {
+		}
+		catch(Exception ex) {
 			ex.printStackTrace();
+		}
+	}
+	
+		public static void dbPushBooking(int ticketId, String flightId, String custUserName) {
+			String databaseURL = "jdbc:mysql://localhost:3306/project?autoReconnect=true&useSSL=false";
+			String databaseUser = "root";
+			String databasePass = "Westsmyrna-2020";
+			
+			try {
+				
+				//loads the dirver to connect to the database
+				Class.forName("com.mysql.jdbc.Driver");
+				
+				Connection connection = DriverManager.getConnection(databaseURL, databaseUser, databasePass);
+				System.out.print("Database connected");
+				String sqlQuery = 
+						"insert into confirmedbookings values(" + ticketId + ", " + flightId + ", " + custUserName + ")";
+				PreparedStatement statement = connection.prepareStatement(sqlQuery);
+				statement.executeUpdate();
+				
+				
+				
+				
+				
+				
+			}catch(Exception ex) {
+				ex.printStackTrace();
+			}
+			
 		}
 		
 		
-		
-		
-	}
+}
 	
 	
 
-}
+
