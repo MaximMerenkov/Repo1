@@ -5,11 +5,11 @@ public class Customer extends Person {
 	protected String custUserName;
 	protected String custPassword;
 	
-	Customer() {
+	public Customer() {
 		
 	}
 	
-	Customer(String firstName, String lastName, String address, String zipCode,
+	public Customer(String firstName, String lastName, String address, String zipCode,
 			String state, String email, String ssn, String securityQuestion,
 			String custUserName, String custPassword) {
 		super(firstName, lastName, address, zipCode, state, email, ssn,

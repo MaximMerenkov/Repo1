@@ -1,7 +1,9 @@
 package gui;
 import java.util.ArrayList;
 
+import BusinessLogic.Data;
 import BusinessLogic.ExceptionsHandlers;
+import BusinessLogic.Person;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -150,18 +152,22 @@ public class AirlineRegistration extends Application{
 	
 	completeButton.setOnAction( event -> {
 		
-		ExceptionsHandlers logic = new ExceptionsHandlers();
+		Person p = new Person(txtFirstName.getText(),txtLastName.getText(), txtAddress.getText(),txtState.getText(),
+				txtZip.getText(), question.getValue(), txtAnswer.getText(), txtEmail.getText(),txtUserName.getText(), txtPassword.getText(),txtSSN.getText());
 		
-		
-		if (logic.didUserEnterAllFields(firstName.getText(), null, null, null, null)) {
+		Data d = new Data();
+		d.setPerson(p);
+		ExceptionsHandlers.catchExceptions(d, "sign up"); 
 			//register user into the database
-			//notify the user of succesful account create with alertbox
+			/*notify the user of succesful account create with alertbox
+			AlertBox.display("Registration confirmation", "Registration is completed");
 		}
 		
 		else {
 			//notify user with alertbox something went wrong
+			AlertBox.display("Registration confirmation", "Please fill out all fields");
 		}
-		
+		*/
 	});
 	
 	registerWindow.setAlignment(Pos.TOP_CENTER);

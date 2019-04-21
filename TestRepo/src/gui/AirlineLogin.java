@@ -72,7 +72,7 @@ public class AirlineLogin extends Application {
 	centerMenu.setMargin(recoverPass, new Insets(10));
 	centerMenu.setMargin(userName, new Insets(10));
 	
-	// Set on action register button
+	// Set listener for register button
 	register.setOnAction(e->{
 		AirlineRegistration window = new AirlineRegistration();
 		try {
@@ -82,7 +82,9 @@ public class AirlineLogin extends Application {
 			e1.printStackTrace();
 		}
 	});
-	
+	log_in.setOnAction(e -> {
+		
+	});
 
 	//* Set one size for all nodes and adjust layout alignment
 	log_in.setMaxWidth(150);

@@ -8,13 +8,14 @@ public class Person {
 	protected String email;
 	protected String ssn;
 	protected String securityQuestion;
+	private String answer;
+	private String password;
+	private String userName;
 	
-	Person () {
-		
-	}
+
 	
 	public Person(String firstName, String lastName, String address, String zipCode,
-			String state, String email, String ssn, String securityQuestion) {
+			String state, String email, String ssn, String securityQuestion, String answer, String userName, String password) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.address = address;
@@ -23,6 +24,9 @@ public class Person {
 		this.email = email;
 		this.ssn = ssn;
 		this.securityQuestion = securityQuestion;
+		this.setAnswer(answer);
+		this.setUserName(userName);
+		this.setPassword(password);
 	}
 	
 	public String getFirstName() {
@@ -87,5 +91,29 @@ public class Person {
 
 	public void setSecurityQuestion(String securityQuestion) {
 		this.securityQuestion = securityQuestion;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getAnswer() {
+		return answer;
+	}
+
+	public void setAnswer(String answer) {
+		this.answer = answer;
 	}
 }
