@@ -1,19 +1,21 @@
 package BusinessLogic;
 public class Person {
-	protected String firstName;
-	protected String lastName;
-	protected String address;
-	protected String zipCode;
-	protected String state;
-	protected String email;
-	protected String ssn;
-	protected String securityQuestion;
+	private String firstName;
+	private String lastName;
+	private String address;
+	private String zipCode;
+	private String state;
+	private String email;
+	private String ssn;
+	private String securityQuestion;
 	private String answer;
 	private String password;
 	private String userName;
 	
 
-	
+	public Person() {
+		
+	}
 	public Person(String firstName, String lastName, String address, String zipCode,
 			String state, String email, String ssn, String securityQuestion, String answer, String userName, String password) {
 		this.firstName = firstName;

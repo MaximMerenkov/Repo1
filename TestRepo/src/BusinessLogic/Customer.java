@@ -12,7 +12,7 @@ public class Customer extends Person {
 	public Customer(String firstName, String lastName, String address, String zipCode,
 			String state, String email, String ssn, String securityQuestion,
 			String custUserName, String custPassword) {
-		super(firstName, lastName, address, zipCode, state, email, ssn,
+		super(firstName, lastName, address, zipCode, state, email, ssn, answer, password, username,
 				securityQuestion);
 		this.custUserName = custUserName;
 		this.custPassword = custPassword;

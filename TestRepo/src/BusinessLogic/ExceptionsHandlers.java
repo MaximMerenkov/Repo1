@@ -25,7 +25,14 @@ public class ExceptionsHandlers {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
-			AlertBox.display("Registration confirmation", "Please fill out all fields");
+			if (e.getMessage().startsWith("Duplicate")) {
+			AlertBox.display("Chosen username already exsist", "Please choose another username");
+				
+			}
+			else {
+				AlertBox.display("Registration confirmation", "Please fill out all fields");
+			}
+			
 		}
 	}
 

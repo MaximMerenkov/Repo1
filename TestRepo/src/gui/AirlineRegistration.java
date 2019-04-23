@@ -152,9 +152,8 @@ public class AirlineRegistration extends Application{
 	
 	completeButton.setOnAction( event -> {
 		
-		Person p = new Person(txtFirstName.getText(),txtLastName.getText(), txtAddress.getText(),txtState.getText(),
-				txtZip.getText(), question.getValue(), txtAnswer.getText(), txtEmail.getText(),txtUserName.getText(), txtPassword.getText(),txtSSN.getText());
-		
+		Person p = new Person( txtFirstName.getText(),txtLastName.getText(), txtAddress.getText(),txtZip.getText(),txtState.getText(),
+				txtEmail.getText(),	txtSSN.getText(), question.getValue(), txtAnswer.getText(), txtUserName.getText(), txtPassword.getText());
 		Data d = new Data();
 		d.setPerson(p);
 		ExceptionsHandlers.catchExceptions(d, "sign up"); 

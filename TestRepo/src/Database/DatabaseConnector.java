@@ -101,15 +101,15 @@ public class DatabaseConnector {
 				//loads the driver to connect to the database
 				
 				Connection connection = DriverManager.getConnection(databaseURL, databaseUser, databasePass);
-				String sqlQuery = "INSERT INTO users (ssn, firstname, lastname, address,zip, state,username,password,email,question, answer) VALUES(?, ?, ?, ?,?,?,?,?,?,?,?)";
+				String sqlQuery = "INSERT INTO users (username, firstname, lastname, address,zip, state, ssn, password, email, question, answer) VALUES(?, ?, ?, ?,?,?,?,?,?,?,?)";
 				PreparedStatement statement = connection.prepareStatement(sqlQuery);
-				statement.setString(1, data.getPerson().getSsn()); //first question mark
+				statement.setString(1, data.getPerson().getUserName()); //first question mark
 				statement.setString(2, data.getPerson().getFirstName()); //second question mark
 				statement.setString(3, data.getPerson().getLastName());
 				statement.setString(4, data.getPerson().getAddress());
 				statement.setString(5, data.getPerson().getZipCode());
 				statement.setString(6, data.getPerson().getState());
-				statement.setString(7, data.getPerson().getUserName());
+				statement.setString(7, data.getPerson().getSsn());
 				statement.setString(8, data.getPerson().getPassword());
 				statement.setString(9, data.getPerson().getEmail());
 				statement.setString(10, data.getPerson().getSecurityQuestion());
